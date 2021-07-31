@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS DE ORIGEM</title>
+</head>
+<body> <h1>Saber se vc é um estrangeiro ou nao </h1>
+    Nome do seu pais: <input type="text" name="texpai" id="texpai">
+<input type="button" value="pesquisar" onclick="clicar()">
+<div id= "res">
+
+</div> 
+<script>
+    function clicar(){
+        var pai= window.document.getElementById("texpai")
+        var res= window.document.getElementById("res") 
+        var final= String(pai.value)
+        res.innerHTML=`<p>voce é do pais <strong>${final}</strong>, logo é estrangeiro!</p>`
+        if (final == "brasil"){
+            res.innerHTML+= "<p>voce é brasileiro, logo não é estrangeiro</p>"
+        }else if (final == "argentina"){
+        res.innerHTML+="<p>voce é boludito, logo é um <strong>LIXO</strong></p>"
+        } else {
+            res.innerHTML+= "<p>mais sorte na proxima</p>"
+        }
+    }
+</script>   
+</body>
+</html>
